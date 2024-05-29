@@ -15,3 +15,17 @@ const students = [
     { name: "Constanza", age: 28, email: "constanza@email.com" },
   ];
   
+  const studentsList = document.getElementById("studentsList");
+  const printButton = document.getElementById("printButton");
+  //const studentsList.addEventListener("click", function printButton(event){
+    printButton.addEventListener("click",function(event){
+      console.log(students)
+    students.map (e=> {
+      const listItem = document.createElement("li");
+      listItem.innerText= e.name + " " + e.age
+
+      listItem.innerHtml = `<p>${e.name}</p><p>${e.age}</p>`;
+    studentsList.appendChild(listItem);
+   });
+    })
+    
